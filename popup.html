@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        body {
+            width: 220px;
+            font-family: sans-serif;
+            padding: 10px;
+            background: #111;
+            color: #eee;
+        }
+
+        label {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+
+        input[type="checkbox"] {
+            width: 40px;
+            height: 20px;
+            appearance: none;
+            background: #333;
+            border-radius: 10px;
+            position: relative;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        input[type="checkbox"]::before {
+            content: "";
+            position: absolute;
+            width: 18px;
+            height: 18px;
+            border-radius: 50%;
+            top: 1px;
+            left: 1px;
+            background: #eee;
+            transition: 0.3s;
+        }
+
+        input[type="checkbox"]:checked {
+            background: #0f0;
+        }
+
+        input[type="checkbox"]:checked::before {
+            transform: translateX(20px);
+        }
+    </style>
+</head>
+
+<body>
+    <label>
+        Block Polls
+        <input type="checkbox" id="toggle" />
+    </label>
+    <script src="popup.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,23 @@
+{
+  "manifest_version": 3,
+  "name": "No More Polls",
+  "version": "2.0",
+  "description": "Blocks YouTube live chat polls & voting banners",
+  "permissions": ["storage", "scripting"],
+  "icons": {
+    "128": "nmp.png"
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "128": "nmp.png"
+    }
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://*.youtube.com/*"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ]
+}
